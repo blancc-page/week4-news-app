@@ -1,6 +1,6 @@
 class Source:
     '''
-    Movie class to define Movie Objects
+    Source class to define Source Objects
     '''
 
     def __init__(self,id,name,description,language):
