@@ -27,12 +27,9 @@ def article(id):
     """
     
     article = get_articles(id)
-    title = f"{article[0].title}"
-    # message = "published at {:%A, %B d%, %Y}."
-    # dateTime = message.format(time)
+    title = f"{article[0].source['name']}"
+
     print(article[0].time)
-    # print(article[0].source)
-    # dt = article[0].time
-    # time = dt.datetime.strptime(article[0]["publishedAt"], "%Y-%m-%dT%H:%M%SZ").date()
+
     
     return render_template("article.html", article = article, title = title)
