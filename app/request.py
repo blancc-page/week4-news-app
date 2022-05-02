@@ -5,9 +5,9 @@ from .models import Source, Article
 
 # Getting api key
 api_key = None
-# Getting the movie base url
+# Getting the source base url
 base_url = None
-
+# Getting the article base url
 article_base_url = None
 
 def configure_request(create_app):
