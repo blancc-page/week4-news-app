@@ -1,5 +1,6 @@
 from app import create_app
 import urllib.request,json
+import datetime
 #from app.models import Article
 from .models import Source, Article
 
@@ -111,7 +112,8 @@ def process_articles(article_list):
         title = article_item.get("title")
         desc = article_item.get("description")
         url = article_item.get("url")
-        time = article_item.get("publishedAt")
+        date = datetime.datetime.strptime(article_item.get("publishedAt"), "%Y-%m-%dT%H:%M:%SZ")
+        time = date.strftime("%A %d, %B %Y.")
         source = article_item.get("source")
         
         if image != "null":

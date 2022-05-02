@@ -4,6 +4,7 @@ from ..request import get_sources, get_articles
 # from ..models import Article
 # from .forms import ReviewForm
 from . import main
+import datetime
 
 # Article = article.Article
 
@@ -27,7 +28,11 @@ def article(id):
     
     article = get_articles(id)
     title = f"{article[0].title}"
-    print(article[0].source)
-    
+    # message = "published at {:%A, %B d%, %Y}."
+    # dateTime = message.format(time)
+    print(article[0].time)
+    # print(article[0].source)
+    # dt = article[0].time
+    # time = dt.datetime.strptime(article[0]["publishedAt"], "%Y-%m-%dT%H:%M%SZ").date()
     
     return render_template("article.html", article = article, title = title)
