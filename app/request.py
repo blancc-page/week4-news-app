@@ -45,19 +45,9 @@ def get_articles(id):
     with urllib.request.urlopen(get_article_url) as url:
         article_data = url.read()
         article_response = json.loads(article_data)
-        # print(article_response)
-        
-        # article_object = None
+
         article_results = None
         
-        # if article_response:
-        #     image = article_response.get("urlToImage")
-        #     title = article_response.get("title")
-        #     desc = article_response.get("description")
-        #     url = article_response.get("url")
-        #     time = article_response.get("publishedAt")
-
-        #     article_object = Article(image,title, desc, url, time)
         
     if article_response["articles"]:
             article_results_list = article_response["articles"]
