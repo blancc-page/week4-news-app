@@ -1,12 +1,7 @@
 from flask import render_template, request, redirect, url_for
-from app import create_app
 from ..request import get_sources, get_articles
-# from ..models import Article
-# from .forms import ReviewForm
 from . import main
-import datetime
 
-# Article = article.Article
 
 @main.route("/")
 def index():
@@ -16,7 +11,6 @@ def index():
     title = 'Home - Welcome to News App'
     
     source = get_sources()
-    # print(source)
     
     return render_template("index.html", title = title, source = source)
 
