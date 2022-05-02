@@ -1,10 +1,6 @@
-from app import create_app
 import urllib.request,json
 import datetime
-#from app.models import Article
 from .models import Source, Article
-
-# Source = source.Source
 
 
 # Getting api key
@@ -113,7 +109,8 @@ def process_articles(article_list):
         desc = article_item.get("description")
         url = article_item.get("url")
         date = datetime.datetime.strptime(article_item.get("publishedAt"), "%Y-%m-%dT%H:%M:%SZ")
-        time = date.strftime("%A %d, %B %Y.")
+        print(date)
+        time = date.strftime("%d, %B %Y, %H:%M")
         source = article_item.get("source")
         
         if image != "null":
