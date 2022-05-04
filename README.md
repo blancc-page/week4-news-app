@@ -9,7 +9,7 @@
 ### :computer: Setup
 To get a local copy up and running follow these simple example steps.
 
-- open your terminal, and run 'git clone https://github.com/blancc-page/week4-news-app' to clone the repository to your computer  
+- open your terminal, and run 'git clone https://news-app-ip.herokuapp.com/' to clone the repository to your computer  
 - cd into the project folder
 - run `python3.8 run.py` in the terminal. The application will show on the command line.
 
