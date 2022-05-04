@@ -5,12 +5,14 @@
             <ul liststyle="none">
             <li class="text-center" >
                 <a href="/source/{{source.id}}">
-                    {{ source.name|truncate(20)}}</a>
+                    <h3>{{ source.name|truncate(30)}}</h3>
+                </a>
                     <br>
-                <span> {{ source.desc }} </span>
+                <span> {{ source.desc|truncate(120) }} </span>
             </li>
             </ul>
         </div>
+
 
     {% endfor %}
 
@@ -39,3 +41,6 @@
     {% endfor %}
 
 {% endmacro %}
+
+
+

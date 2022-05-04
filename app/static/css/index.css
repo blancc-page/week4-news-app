@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Playfair+Display:wght@400;500;700&display=swap');
 
 *{
     box-sizing: border-box;
@@ -6,20 +7,30 @@
 
 h1{
     text-align: center;
-    transform: translateX(45px);
     margin: 50px 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 55px;
+}
+
+h3{
+    font-size: 30px;
 }
 
 img{
-   width: auto;
-   height: 200px; 
+   width: 250px;
+   height: 150px; 
+   align-items: center;
 }
 
 
 body{
-    font-family: "Roboto", sans-serif;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    font-family: 'Gideon Roman', cursive;
+    font-size: 20px;
     margin: 0;
-    padding-right: 85px !important;
+    padding: 85px !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,4 +42,16 @@ body{
 li{
     list-style: none;
     margin-bottom: 10px;
+}
+hr{
+    width: 50%;
+    border-top: 1px solid #000;
+}
+.container-fluid{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.source-card{
+    transform: translateX(-25px);
+    margin-bottom: 20px;
 }
